@@ -1,0 +1,30 @@
+.tareasCreadas {
+    display: flex;
+    flex-direction: column;
+
+    width: 30.7rem;
+    margin: 3rem auto 0;
+}
+
+.statusTareas {
+    display: flex;
+    justify-content: space-between;
+}
+
+.statusTareas > p {
+    color: var(--purple);
+    font-weight: bold;
+}
+
+.statusTareas > p:first-child {
+    color: var(--blue);
+    font-weight: bold;
+}
+
+span {
+    color: var(--gray-100);
+    background: var(--gray-400);
+    border-radius: 50%;
+    padding: 0 .2rem;
+    margin-left: .3rem;
+}
