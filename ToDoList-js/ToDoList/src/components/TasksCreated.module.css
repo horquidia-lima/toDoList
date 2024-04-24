@@ -49,8 +49,10 @@ span {
 .tarea input {
     appearance: none;
     border: 1.4px solid var(--blue);
-    width: 0.112px;
-    height: 0.112px;
+    width: 0.000005px;
+    height: 0.000005px;
     cursor: pointer;
     border-radius: 50%;
+
+    display: flex;
 }

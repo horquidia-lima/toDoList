@@ -1,5 +1,6 @@
 import {Trash} from 'phosphor-react'
 import styles from './TasksCreated.module.css'
+import { NoTasksCreated } from './NoTasksCreated'
 
 export function TasksCreated(){
     return(
@@ -15,7 +16,8 @@ export function TasksCreated(){
                     <span> 2 de 5</span>
                 </p>
             </div>
-
+            <NoTasksCreated/>
+            {/*
             <div className={styles.tareas}>
                 <div className={styles.tarea}> 
                     <input type="checkbox" /> 
@@ -42,7 +44,7 @@ export function TasksCreated(){
                 </div>
             </div>
             
-            
+    */}
         </div>
     )
 }
