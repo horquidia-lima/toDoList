@@ -3,34 +3,11 @@
     flex-direction: column;
 
     width: 30.7rem;
-    margin: 3rem auto 0;
-}
-
-.statusTareas {
-    display: flex;
-    justify-content: space-between;
-}
-
-.statusTareas > p {
-    color: var(--purple);
-    font-weight: bold;
-}
-
-.statusTareas > p:first-child {
-    color: var(--blue);
-    font-weight: bold;
-}
-
-span {
-    color: var(--gray-100);
-    background: var(--gray-400);
-    border-radius: 50%;
-    padding: 0 .2rem;
-    margin-left: .3rem;
+    margin: 0.9rem auto 0;
 }
 
 .tareas {
-    margin-top: 1rem;
+    margin-top: 0.1rem;
 }
 
 .tarea {
@@ -46,13 +23,21 @@ span {
     font-size: 0.7rem;
 }
 
+
+
 .tarea input {
-    appearance: none;
+    /*appearance: none;
+    width: 10px;
+    height: 10px;
+    */
+
     border: 1.4px solid var(--blue);
-    width: 0.000005px;
-    height: 0.000005px;
+
+    
     cursor: pointer;
     border-radius: 50%;
 
     display: flex;
 }
+
+
