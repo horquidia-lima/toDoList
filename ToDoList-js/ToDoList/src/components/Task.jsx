@@ -26,7 +26,6 @@ import { useState } from 'react'
 export function Task() {
   const [task, setTask] = useState([
     'Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.'
-    
   ])
 
   const [newTask, setNewTask] = useState('')
@@ -46,6 +45,13 @@ export function Task() {
   function handleNewTaskChange(){
     event.target.setCustomValidity('')
     setNewTask(event.target.value)
+  }
+
+  function deleteTask(commentToDelete){
+    const taskWithoutDeleteOne = task.filter(comment => {
+      return comment != commentToDelete
+    })
+    setTask(taskWithoutDeleteOne)
   }
 
     return(
@@ -82,6 +88,7 @@ export function Task() {
                     <TasksCreated 
                         key={comment}
                         comment={comment}
+                        onDeleteComment={deleteTask}
                     />
                 )
             })}
