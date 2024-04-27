@@ -54,6 +54,12 @@ export function Task() {
     setTask(taskWithoutDeleteOne)
   }
 
+  function handleNewTaskInvalid(){
+    event.target.setCustomValidity('Esse campo é obrigatorio')
+  }
+
+  const isNewTaskEmpty = newTask.length === 0
+
     return(
         <div>
             <form onSubmit={handleCreateNewTask} className={styles.form}>
@@ -62,11 +68,12 @@ export function Task() {
                     name='comment'
                     value={newTask}
                     onChange={handleNewTaskChange}
+                    onInvalid={handleNewTaskInvalid}
                     type="text"
                     placeholder="Adicione uma nova tarefa"
                 />
 
-                <button>Criar 
+                <button type='submit' disabled={isNewTaskEmpty}>Criar 
                     <PlusCircle size={16} />
                 </button>
             </form>
