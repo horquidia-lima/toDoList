@@ -24,13 +24,11 @@ import { useState } from 'react'
   ]  
 
 export function Task() {
-  const [task, setTask] = useState([
-    'Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.'
-  ])
+  const [task, setTask] = useState([])
 
   const [newTask, setNewTask] = useState('')
 
-  const [taskCount, setTaskCount] = useState(1)
+  const [taskCount, setTaskCount] = useState(0)
 
   function handleCreateNewTask(){
     event.preventDefault()
@@ -65,6 +63,7 @@ export function Task() {
   function handleTaskCount(){
     setTaskCount((state) => {
       return state + 1
+      console.log(handleTaskCount)
     })
   }
 
@@ -97,16 +96,21 @@ export function Task() {
                     <span> 2 de 5</span>
                 </p>
             </div>
-            {/*<NoTasksCreated/>*/}
-            {task.map(comment => {
-                return(
-                    <TasksCreated 
-                        key={comment}
-                        comment={comment}
-                        onDeleteComment={deleteTask}
-                    />
-                )
-            })}
+            <div>
+              {task.length > 0  ? (
+                <ul>
+                  {task.map(comment => {
+                    return(
+                        <TasksCreated 
+                            key={comment}
+                            comment={comment}
+                            onDeleteComment={deleteTask}
+                        />
+                  )
+                  })}
+                </ul>
+              ) : (<NoTasksCreated/>)}
+            </div>
         </div>
     )
 }
