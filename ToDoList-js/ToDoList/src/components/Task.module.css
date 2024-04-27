@@ -17,7 +17,7 @@
     border: none;
 }
 
-button {
+.buttonCreated {
     background: var(--blue-dark);
     color: var(--gray-100);
     border: none;
@@ -57,6 +57,8 @@ span {
     padding: 0 .2rem;
     margin-left: .3rem;
 }
+
+
 
 
 

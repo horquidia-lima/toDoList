@@ -30,6 +30,8 @@ export function Task() {
 
   const [newTask, setNewTask] = useState('')
 
+  const [taskCount, setTaskCount] = useState(1)
+
   function handleCreateNewTask(){
     event.preventDefault()
     setTask([...task, newTask])
@@ -60,6 +62,12 @@ export function Task() {
 
   const isNewTaskEmpty = newTask.length === 0
 
+  function handleTaskCount(){
+    setTaskCount((state) => {
+      return state + 1
+    })
+  }
+
     return(
         <div>
             <form onSubmit={handleCreateNewTask} className={styles.form}>
@@ -73,7 +81,7 @@ export function Task() {
                     placeholder="Adicione uma nova tarefa"
                 />
 
-                <button type='submit' disabled={isNewTaskEmpty}>Criar 
+                <button className={styles.buttonCreated} type='submit' disabled={isNewTaskEmpty} onClick={handleTaskCount}>Criar 
                     <PlusCircle size={16} />
                 </button>
             </form>
@@ -81,7 +89,7 @@ export function Task() {
             <div className={styles.statusTareas}>
                 <p>
                     Tarefas criadas 
-                    <span> 5</span>
+                    <span>{taskCount}</span>
                 </p>
 
                 <p>

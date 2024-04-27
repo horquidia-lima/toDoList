@@ -14,8 +14,8 @@ export function TasksCreated({comment, onDeleteComment}){
                 <div className={styles.tarea}> 
                     <input type="checkbox" /> 
                     <p>{comment}</p>
-                    <button onClick={handleDeleteComment} title='Deletar task'>
-                        <Trash size={18} />
+                    <button className={styles.buttonDelete} onClick={handleDeleteComment} title='Deletar task'>
+                        <Trash className={styles.buttonTrash} size={18} />
                     </button>
                     
                 </div>

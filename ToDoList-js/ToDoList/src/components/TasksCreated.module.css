@@ -40,4 +40,12 @@
     display: flex;
 }
 
+.buttonDelete {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+
+
+
 
