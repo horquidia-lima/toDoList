@@ -24,7 +24,10 @@ import { useState } from 'react'
   ]  
 
 export function Task() {
-  const [task, setTask] = useState([])
+  const [task, setTask] = useState([
+    'Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.'
+    
+  ])
 
   const [newTask, setNewTask] = useState('')
 
@@ -33,6 +36,8 @@ export function Task() {
     setTask([...task, newTask])
     setNewTask('')
     
+    console.log(task)
+    console.log(newTask)
     /*event.preventDefault()
     const newTaskComment = event.target.comment.value
     console.log(newTaskComment)*/
@@ -72,11 +77,11 @@ export function Task() {
                 </p>
             </div>
             {/*<NoTasksCreated/>*/}
-            {tasks.map(task => {
+            {task.map(comment => {
                 return(
                     <TasksCreated 
-                        key={task.id}
-                        taskText={task.textTask}
+                        key={comment}
+                        comment={comment}
                     />
                 )
             })}

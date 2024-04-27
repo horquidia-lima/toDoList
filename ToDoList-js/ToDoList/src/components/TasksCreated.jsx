@@ -3,13 +3,13 @@ import styles from './TasksCreated.module.css'
 
 
 
-export function TasksCreated({taskText}){
+export function TasksCreated({comment}){
     return(
         <div className={styles.tareasCreadas}>
             <div className={styles.tareas}>
                 <div className={styles.tarea}> 
                     <input type="checkbox" /> 
-                    <p>{taskText}</p>
+                    <p>{comment}</p>
                     <Trash size={18} />
                 </div>
             </div>
